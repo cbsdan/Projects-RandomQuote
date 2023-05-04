@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Random Quote</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>  
+
+  <main>
+    <!--Container for the whole random quote app-->
+    <div id="random-quote" class="">
+      <!--DIV 1: TOP-SECTION-->
+      <div class="top-section">
+        <!--DIV A: TOP-LEFT-->
+        <div class="top-left">
+          <h1 class="label">Random Quote</h1>
+        </div>
+        
+        <!--DIV B: TOP-RIGHT-->
+        <div class="top-right">
+          <!--DIV a: TOP-RIGHT-ADD-->
+          <button class="add" title="add to favorites">
+            <i class="fa-solid fa-heart"></i>
+          </button>
+  
+          <!--DIV b: TOP-RIGHT-SHARE-->
+          <button class="next" title="next random quote">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+  
+      <!--DIV 2: MAIN-SECTION-->
+      <div id="main-section" >
+        <!--DIV A: QUOTE-->
+        <div class="quote-container">
+  
+          <!--DIV a: QUOTE-SIGN-LEFT-->
+          <div class="quote-sign left">
+            <i class="fa-sharp fa-solid fa-quote-left"></i>
+          </div>
+  
+          <!--DIV b: QUOTE-TEXT-->
+          <div class="quote">
+          </div>
+  
+          <!--DIV c: QUOTE-SIGN-RIGHT-->
+          <div class="quote-sign right">
+            <i class="fa-sharp fa-solid fa-quote-right"></i>
+          </div>
+  
+        </div>
+  
+        <!--DIV B: AUTHOR -->
+        <div class="author-container">
+          <!--DIV a: AUTHOR-->
+          <p class="author">
+          </p>    
+  
+        </div>
+  
+        <!--DIV C: GENRE-->
+        <div class="genre-container">
+          <!--DIV a: GENRE-->
+          <p class="genre"></p>
+  
+        </div>
+      </div>
+    </div>
+
+    <button id="favorites-button">
+      Go to Favorites
+    </button>
+
+  </main>
+
+        
+  <!--Container for the favorites quotes-->
+  <div id="favorite-quotes" class="hidden">
+    
+    <button class="exit-fav-button"><i class="fa-solid fa-x fa-xl"></i></button>
+
+    <h3>Favorite Quotes:</h3>
+
+    <div class="fav-quote-label">
+      <p>No.</p>
+      <p>Quote & Author</p>
+      <p>Genre</p>
+      <p>X</p>
+    </div>
+    
+    <!--
+      .fav-quote here
+      will append in js
+    -->
+  </div>
+</body>
+</html>

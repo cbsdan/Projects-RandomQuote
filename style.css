@@ -34,6 +34,12 @@ main {
   box-shadow: 0 0 10px 3px rgba(109, 109, 109, 0.7);
 }
 
+.loading-text {
+  position: absolute;
+  top: -2rem;
+  color: rgb(145, 145, 145);
+}
+
 .tip {
   position: absolute;
   bottom: -2rem;

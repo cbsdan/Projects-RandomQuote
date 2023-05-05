@@ -10,6 +10,9 @@ const nextBtn = document.querySelector('.next');
 const goToFavBtn = document.getElementById('favorites-button');
 const exitFavBtn = document.querySelector('.exit-fav-button');
 
+const loadText = document.querySelector('.loading-text');
+const tipEl = document.querySelector('.tip');
+
 let data;
 let count = 1;
 
@@ -33,12 +36,15 @@ addBtn.addEventListener('click', ()=> {
 
 
 nextBtn.addEventListener('click', async()=>{
-  document.querySelector('.tip').innerText = `Loading..`;
+  //Before loading the quote
+  tipEl.innerText = ``;
+  loadText.innerText = `Loading..`;
 
   data = await randomQuote()
 
   //show tip after loading the quote
-  document.querySelector('.tip').innerText = `Press 'Enter' to show a new random quote`;
+  tipEl.innerText = `Press 'Enter' to show a new random quote`;
+  loadText.innerText = ``;
 })
 
 
@@ -59,11 +65,18 @@ window.addEventListener('keydown', (e)=>{
   }
 })
 window.onload = async()=>{
+  //Load previous saved quote from LS
   loadFavQuoteLS();
+
+  //Before loading the quote
+  tipEl.innerText = ``;
+  loadText.innerText = `Loading..`;
 
   data = await randomQuote();
 
-  document.querySelector('.tip').innerText = `Press 'Enter' to show a new random quote`;
+  //show tip after loading the quote
+  tipEl.innerText = `Press 'Enter' to show a new random quote`;
+  loadText.innerText = ``;
 }
 
 

@@ -33,7 +33,12 @@ addBtn.addEventListener('click', ()=> {
 
 
 nextBtn.addEventListener('click', async()=>{
-  data = await randomQuote();
+  document.querySelector('.tip').innerText = `Loading..`;
+
+  data = await randomQuote()
+
+  //show tip after loading the quote
+  document.querySelector('.tip').innerText = `Press 'Enter' to show a new random quote`;
 })
 
 
@@ -57,6 +62,8 @@ window.onload = async()=>{
   loadFavQuoteLS();
 
   data = await randomQuote();
+
+  document.querySelector('.tip').innerText = `Press 'Enter' to show a new random quote`;
 }
 
 
@@ -84,6 +91,11 @@ function renderQuote (data) {
 async function randomQuote() {
   const data = await getRandomQuote();
   addBtn.classList.remove('active'); 
+
+  while (data.quoteText.length > 220) {
+    console.log(data.quoteText.length);
+    data = await getRandomQuote();
+  }
 
   renderQuote(data);
 

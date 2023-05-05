@@ -111,7 +111,7 @@ main {
 .quote {
   display: inline-flex;
   align-items: center;
-  text-align: justify;
+  text-align: center;
   font-size: 1.5rem;
   padding: 0 0.5rem;
 }

@@ -81,9 +81,16 @@ window.onload = async()=>{
 
 
 async function getRandomQuote () {
-  const resp = await fetch(API);
-  const respData = await resp.json();
-  return respData.data[0];
+  try {
+    const resp = await fetch(API);
+    const respData = await resp.json();
+    return respData.data[0];
+  } catch (error) {
+    // Handle the error
+    console.error(error);
+    throw new Error('Error occurred in myAsyncFunction');
+  }
+
 }
 
 function renderQuote (data) {
@@ -102,7 +109,7 @@ function renderQuote (data) {
 
 
 async function randomQuote() {
-  const data = await getRandomQuote();
+  data = await getRandomQuote();
   addBtn.classList.remove('active'); 
 
   while (data.quoteText.length > 220) {

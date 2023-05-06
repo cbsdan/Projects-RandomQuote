@@ -113,17 +113,17 @@ main {
   align-items: center;
   text-align: center;
   font-size: 1.5rem;
-  padding: 0 0.5rem;
 }
 
 .author-container {
   display: flex;
   align-items: center;
   justify-content: end;
-  padding: 0 5rem;
+  padding: 0 5.5rem;
 }
 .author-container *{
   font-size: 1.2rem;
+  font-style: italic;
 }
 .genre {
 font-family: 'Roboto', Arial;
@@ -294,7 +294,7 @@ font-weight: 600;
     font-size: 1.3rem;
   }
   .author-container {
-    padding: 0 4rem;
+    padding: 0 4.5rem;
   }
   .author-container * {
     font-size: 1rem;
@@ -320,7 +320,7 @@ font-weight: 600;
     font-size: 1.1rem;
   }
   .author-container {
-    padding: 0 3rem;
+    padding: 0 3.5rem;
   }
   .author-container *{
     font-size: 0.8rem;
